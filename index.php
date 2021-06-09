@@ -1,5 +1,5 @@
 <?php
 
-$name = htmlspecialchars($_GET['name']);
+$names = ['Awais', 'Zaid', 'Khubaib', 'Junaid'];
 
 require 'index.view.php';

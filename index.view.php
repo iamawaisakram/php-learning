@@ -11,10 +11,14 @@
     <?php foreach ($person as $key => $feature): ?>
 
       <li>
-        <strong><?=$key?></strong> <?=$feature?>
+        <strong><?=ucwords($key)?></strong> <?=$feature?>
       </li>
 
     <?php endforeach;?>
+
+    <li>
+      <strong>Status: </strong> <?=$person['single'] ? 'Single' : 'Married'?>
+    </li>
 
 
   </body>

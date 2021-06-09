@@ -4,6 +4,7 @@ $person = [
     'age' => 26,
     'career' => 'SSE',
     'hair' => 'brownish black',
+    'single' => false,
 ];
 
 $person['name'] = 'Awais';
@@ -14,6 +15,6 @@ echo '<pre>';
 var_dump($person);
 echo '</pre>';
 
-die();
+// die();
 
 require 'index.view.php';

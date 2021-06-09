@@ -8,9 +8,11 @@
 
   </head>
   <body>
-    <?php foreach ($names as $name): ?>
+    <?php foreach ($person as $key => $feature): ?>
 
-      <h1> <?=$name?> </h1>
+      <li>
+        <strong><?=$key?></strong> <?=$feature?>
+      </li>
 
     <?php endforeach;?>
 

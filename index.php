@@ -1,5 +1,7 @@
 <?php
 
+require 'functions.php';
+
 $person = [
     'age' => 26,
     'career' => 'SSE',
@@ -8,6 +10,8 @@ $person = [
 ];
 
 $person['name'] = 'Awais';
+
+dd($person);
 
 unset($person['career']);
 

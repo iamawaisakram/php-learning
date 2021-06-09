@@ -17,7 +17,12 @@
     <?php endforeach;?>
 
     <li>
-      <strong>Status: </strong> <?=$person['single'] ? 'Single' : 'Married'?>
+      <strong>Status: </strong>
+      <?php if ($person['single']): ?>
+        <span class="icon">&#9989;</span>
+      <?php else: ?>
+        <span class="icon">&#10006;</span>
+      <?php endif;?>
     </li>
 
 

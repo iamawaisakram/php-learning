@@ -2,23 +2,36 @@
 
 require 'functions.php';
 
-$person = [
-    'age' => 26,
-    'career' => 'SSE',
-    'hair' => 'brownish black',
-    'single' => false,
+class Task
+{
+    public $description;
+
+    public $completed = false;
+
+    public function __construct($description)
+    { // work on the initiation of Task
+
+        $this->description = $description;
+
+    }
+
+    public function complete()
+    {
+        $this->completed = true;
+    }
+
+    public function isComplete()
+    {
+        return $this->completed;
+    }
+
+}
+
+$tasks = [new Task('This is a task'),
+    new Task('This is the second task'),
+    new Task('This is the third task'),
 ];
 
-$person['name'] = 'Awais';
-
-dd($person);
-
-unset($person['career']);
-
-echo '<pre>';
-var_dump($person);
-echo '</pre>';
-
-// die();
+$tasks[0]->complete();
 
 require 'index.view.php';

@@ -8,22 +8,22 @@
 
   </head>
   <body>
-    <?php foreach ($person as $key => $feature): ?>
+    <?php foreach ($tasks as $task): ?>
+      <?php if ($task->completed): ?>
+        <li>
+          <s>
+            <?=$task->description?>
+          </s>
+        </li>
+      <?php else: ?>
+        <li>
+          <?=$task->description?>
+        </li>
 
-      <li>
-        <strong><?=ucwords($key)?></strong> <?=$feature?>
-      </li>
-
+      <?php endif;?>
     <?php endforeach;?>
 
-    <li>
-      <strong>Status: </strong>
-      <?php if ($person['single']): ?>
-        <span class="icon">&#9989;</span>
-      <?php else: ?>
-        <span class="icon">&#10006;</span>
-      <?php endif;?>
-    </li>
+
 
 
   </body>

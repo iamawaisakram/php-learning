@@ -9,22 +9,20 @@
   </head>
   <body>
     <?php foreach ($tasks as $task): ?>
-      <?php if ($task->completed): ?>
-        <li>
-          <s>
+      <ul>
+        <?php if ($task->completed): ?>
+          <li>
+            <s>
+              <?=$task->description?>
+            </s>
+          </li>
+        <?php else: ?>
+          <li>
             <?=$task->description?>
-          </s>
-        </li>
-      <?php else: ?>
-        <li>
-          <?=$task->description?>
-        </li>
+          </li>
 
-      <?php endif;?>
+        <?php endif;?>
+      </ul>
     <?php endforeach;?>
-
-
-
-
   </body>
 </html>

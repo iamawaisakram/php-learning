@@ -20,7 +20,6 @@
           <li>
             <?=$task->description?>
           </li>
-
         <?php endif;?>
       </ul>
     <?php endforeach;?>
